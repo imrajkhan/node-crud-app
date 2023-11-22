@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Blog App</title>
+</head>
+<body>
+  <h1>All Blogs</h1>
+  <ul>
+    <% blogs.forEach(blog => { %>
+      <li><%= blog.title %> - <%= blog.body %> - <%= blog.image %></li>
+    <% }) %>
+  </ul>
+  <form action="/blog" method="POST">
+    <input type="text" name="title" placeholder="Title">
+    <input type="text" name="body" placeholder="Body">
+    <input type="text" name="image" placeholder="Image URL">
+    <button type="submit">Create Blog</button>
+  </form>
+</body>
+</html>
+
